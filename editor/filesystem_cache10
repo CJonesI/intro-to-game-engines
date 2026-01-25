@@ -1,0 +1,58 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1769293743
+animated_sprite_2d.gd::GDScript::8021505832878067072::1769235294::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+character_body_2d.gd::GDScript::9210052898559999894::1769235804::0::1::::<>CharacterBody2D<><>0<>0<><>::
+character_body_2d.tscn::PackedScene::7556317203844391426::1769235525::0::1::::<><><>0<>0<><>::uid://clf1grsys1sfu::::res://Assets/2D Resources/characters/DinoSprites - tard.png<>uid://d4hohw3kpqq2q::::res://character_body_2d.gd
+floor.tscn::PackedScene::324239222228661051::1768720016::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::6040146537585050279::1768708740::1768708746::1::::<><><>0<>0<>0a5510d83faf26ef414f995978b4bb42<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+label.tscn::PackedScene::3429031101466457097::1768720113::0::1::::<><><>0<>0<><>::
+::res://addons/::1768802188
+::res://addons/godot-git/::1768802917
+godot-git.gd::GDScript::1768572587265474832::1768802188::0::1::::<>EditorPlugin<><>0<>1<><>::
+plugin.cfg::TextFile::-1::1768802917::0::1::::<><><>0<>0<><>::
+::res://Assets/::1768711343
+::res://Assets/2D Resources/::1768711343
+::res://Assets/2D Resources/characters/::1768711352
+DinoSprites - doux.png::CompressedTexture2D::3957480280214444311::1768711352::1768711344::1::::<><><>0<>0<>19acf43cf3a619f903abc4be30b3f725<>res://.godot/imported/DinoSprites - doux.png-0257e7ee32d84bcac314c7ae774b2f90.ctex::
+DinoSprites - mort.png::CompressedTexture2D::318480662394207871::1768711352::1768711344::1::::<><><>0<>0<>0e9a4a15ae1e4585800423775d932c94<>res://.godot/imported/DinoSprites - mort.png-9ba0eea1a815ec0ae498dcd4445acd05.ctex::
+DinoSprites - tard.png::CompressedTexture2D::5556830814569193718::1768711352::1768711344::1::::<><><>0<>0<>29844d83642df454be6041aed22eb859<>res://.godot/imported/DinoSprites - tard.png-45f3246fdf6527ea06b2ba6a9daec956.ctex::
+DinoSprites - vita.png::CompressedTexture2D::3009324292690963197::1768711352::1768711344::1::::<><><>0<>0<>1ecad4f43d481dac306dabf82a2aaad2<>res://.godot/imported/DinoSprites - vita.png-20160d66c0cdbe77cf3330b277f49a28.ctex::
+::res://Assets/2D Resources/enemies/::1768711352
+Animations Guide example updated 1.3.png::CompressedTexture2D::327113849720579516::1768711352::1768711344::1::::<><><>0<>0<>8eb2f81cdfb6879ab480e2ebfbddc989<>res://.godot/imported/Animations Guide example updated 1.3.png-b58e1da3ec1d4bbb394e4095ddc756a8.ctex::
+Blue Slime Spritesheet.png::CompressedTexture2D::7138762273027570210::1768711352::1768711344::1::::<><><>0<>0<>fcab5cdf14081cb7fb4ee955be74b1a1<>res://.godot/imported/Blue Slime Spritesheet.png-5e7572b5c3c23aeb6513fb33588e05fb.ctex::
+Brown Slime Spritesheet.png::CompressedTexture2D::1119388109221396585::1768711352::1768711344::1::::<><><>0<>0<>c9fcb7e40603ece42cfdf1eeacd0f5eb<>res://.godot/imported/Brown Slime Spritesheet.png-073dd683dc537ee656b87267fe715e43.ctex::
+Gray Slime Spritesheet.png::CompressedTexture2D::6658785491781250369::1768711352::1768711344::1::::<><><>0<>0<>4008e0da31f23b063a804e22e9755148<>res://.godot/imported/Gray Slime Spritesheet.png-e12a15c40fb2aa7eed7141b743f784db.ctex::
+Green Slime Spritesheet.png::CompressedTexture2D::2665292356436198239::1768711352::1768711344::1::::<><><>0<>0<>0d5819db799f75f234a57843dba3e3d6<>res://.godot/imported/Green Slime Spritesheet.png-d13c480e76e0467e5cb2072be57c4097.ctex::
+Ogre Slime Spritesheet.png::CompressedTexture2D::391896018965202489::1768711352::1768711344::1::::<><><>0<>0<>d4f38a11f6276c3376995b65fd72b5b8<>res://.godot/imported/Ogre Slime Spritesheet.png-3cf1902b1fb615c66f77b8209e6f7737.ctex::
+Purple Slime Spritesheet.png::CompressedTexture2D::5766265961164972456::1768711352::1768711344::1::::<><><>0<>0<>43e5f388c1a4f43f5c92f4294042d333<>res://.godot/imported/Purple Slime Spritesheet.png-af5b5b6104ed32ddf044a45e79198c43.ctex::
+Red Slime Spritesheet.png::CompressedTexture2D::3816985591543763293::1768711352::1768711344::1::::<><><>0<>0<>08f8da1786731f55c883e7334e8e8022<>res://.godot/imported/Red Slime Spritesheet.png-0c5869885a96f7240e0a9f36449b78ec.ctex::
+::res://Assets/2D Resources/fonts/::1768711352
+PixelOperator8-Bold.ttf::FontFile::7568320946716730375::1768711352::1768711344::1::::<><><>0<>0<>d9c5c1a0267b54a65a5d7886e0e2a52e<>res://.godot/imported/PixelOperator8-Bold.ttf-f028299ba9a41f45686787924bcf2a6f.fontdata::
+PixelOperator8.ttf::FontFile::6786563645732860835::1768711352::1768711344::1::::<><><>0<>0<>6b0b3cf5658dc5d4bb59a6cade0e12bb<>res://.godot/imported/PixelOperator8.ttf-50c43e702e290a6af4b30f9272a90d40.fontdata::
+::res://Assets/2D Resources/items/::1768711352
+coin.png::CompressedTexture2D::3913404777745936212::1768711352::1768711344::1::::<><><>0<>0<>841dfc05965759b70bb8af727cd147b2<>res://.godot/imported/coin.png-e7358e469403329e42cbfc105437c0e5.ctex::
+fruit.png::CompressedTexture2D::4858373059305959805::1768711352::1768711344::1::::<><><>0<>0<>9c78b59a21ae39460acfe88c3063cbf8<>res://.godot/imported/fruit.png-7dccb9afbb47ec84ee29106f2f07f65b.ctex::
+::res://Assets/2D Resources/music/::1768711352
+time_for_adventure.mp3::AudioStreamMP3::1945589922762137983::1768711352::1768711344::1::::<><><>0<>0<>e57c4f15250e9407de87d6a8240a9b0a<>res://.godot/imported/time_for_adventure.mp3-b320b8989f97785f9ae99ec54f96e824.mp3str::
+::res://Assets/2D Resources/sounds/::1768711352
+sfx_bump.ogg::AudioStreamOggVorbis::4961959893474016499::1768711352::1768711344::1::::<><><>0<>0<>6753ed51540b7880088be00ba9c8e542<>res://.godot/imported/sfx_bump.ogg-6b15cf57f75ebdeab87b9faee7886ca3.oggvorbisstr::
+sfx_coin.ogg::AudioStreamOggVorbis::5599606386377794044::1768711352::1768711344::1::::<><><>0<>0<>ee120f1f011ca92a559566d44671753a<>res://.godot/imported/sfx_coin.ogg-e043b62704436fab4a9541f2ba1b723c.oggvorbisstr::
+sfx_disappear.ogg::AudioStreamOggVorbis::2007919945082024786::1768711352::1768711344::1::::<><><>0<>0<>07a4cb46d07576f5117f0ededada786f<>res://.godot/imported/sfx_disappear.ogg-7e52e84d056b6ee6718fb9a41b24149a.oggvorbisstr::
+sfx_gem.ogg::AudioStreamOggVorbis::4285742100114931292::1768711352::1768711344::1::::<><><>0<>0<>b9fe901bdbae64a252cf03fba287b6b1<>res://.godot/imported/sfx_gem.ogg-ee70db925fd9d2e8c518ce50c3c68d31.oggvorbisstr::
+sfx_hurt.ogg::AudioStreamOggVorbis::4204673715730143747::1768711352::1768711344::1::::<><><>0<>0<>2d385f18d04b4259945e1e983fb9dcb4<>res://.godot/imported/sfx_hurt.ogg-555258ee6f60de1ecc5c0e9568d4ffe9.oggvorbisstr::
+sfx_jump-high.ogg::AudioStreamOggVorbis::3590299174869975923::1768711352::1768711344::1::::<><><>0<>0<>94b18fca9803966f0e2828f0f635cde8<>res://.godot/imported/sfx_jump-high.ogg-639476ab5bb10556c223c24a704d55f6.oggvorbisstr::
+sfx_jump.ogg::AudioStreamOggVorbis::3669053306616572370::1768711352::1768711344::1::::<><><>0<>0<>dbb66eecf40ff41e2d0b86b0ceb8731b<>res://.godot/imported/sfx_jump.ogg-c7627dac13ab8426722f313dbeb40131.oggvorbisstr::
+sfx_magic.ogg::AudioStreamOggVorbis::5387032704492743197::1768711352::1768711344::1::::<><><>0<>0<>db55f9082f5d9623cdf3a8cf22388c2c<>res://.godot/imported/sfx_magic.ogg-a8c61fec1d46515d46a6f5f536e06a70.oggvorbisstr::
+sfx_select.ogg::AudioStreamOggVorbis::4205833921255716804::1768711352::1768711344::1::::<><><>0<>0<>1a0aa8aead51c8ffb1de8fa596328141<>res://.godot/imported/sfx_select.ogg-e263e72793a3728d725818b7fdf6e86c.oggvorbisstr::
+sfx_throw.ogg::AudioStreamOggVorbis::5164792140947462537::1768711352::1768711344::1::::<><><>0<>0<>799852b6773dcdc8e45ac720fcaedaf8<>res://.godot/imported/sfx_throw.ogg-ce80b48ad42877969ff750a1d91b649b.oggvorbisstr::
+::res://Assets/2D Resources/tilesets/::1768711352
+back.png::CompressedTexture2D::4443170875910211210::1768711352::1768711344::1::::<><><>0<>0<>9749d7b0f2a9c1e08c6edccc54f5b89a<>res://.godot/imported/back.png-8ef251f77f06dbe74f0d93f66e8de176.ctex::
+middle.png::CompressedTexture2D::128439845960419841::1768711352::1768711344::1::::<><><>0<>0<>6ef26e0860ae1c6594af883ee6a037f5<>res://.godot/imported/middle.png-51949471d3658ade8d9c85365be45af4.ctex::
+props.png::CompressedTexture2D::6993355299496403009::1768711352::1768711344::1::::<><><>0<>0<>5f090b8ec88a9a3f9e407401846c1bba<>res://.godot/imported/props.png-df8708d1bcae486ad75eca8aa9f015c2.ctex::
+tileset.png::CompressedTexture2D::6425053799524260397::1768711352::1768711344::1::::<><><>0<>0<>0741e551d7bba00467692ae738742640<>res://.godot/imported/tileset.png-1236820d18e35ce0db1d6d617c8609f3.ctex::
+::res://into-to-game-engine/::1768808131
+::res://into-to-game-engine/intro_to_game_engines_2026-01-17_23-18-30/::1768805517
+::res://Scenes/::1769240999
+character_body_2d.tscn::PackedScene::5182814405566104057::1768716321::0::1::::<><><>0<>0<><>::uid://bi40ep63o0n78::::res://Assets/2D Resources/characters/DinoSprites - vita.png
+game.tscn::PackedScene::5601990588832668447::1769240999::0::1::::<><><>0<>0<><>::uid://dfwlo8by8pl11::::res://character_body_2d.tscn<>uid://b3hndvuofygn::::res://Assets/2D Resources/tilesets/middle.png<>uid://bo4bv2j3b48cj::::res://label.tscn<>uid://cxslxyfjmpuu4::::res://Assets/2D Resources/tilesets/tileset.png
+::res://Scripts/::1768711320
