@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cl2v74k1gxcb4"]
+[gd_scene load_steps=5 format=3 uid="uid://cl2v74k1gxcb4"]
 
 [ext_resource type="PackedScene" uid="uid://dfwlo8by8pl11" path="res://character_body_2d.tscn" id="1_ebmjs"]
 [ext_resource type="PackedScene" uid="uid://bkgkxotdvpw5o" path="res://Scenes/tilemap2d.tscn" id="1_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://bo4bv2j3b48cj" path="res://label.tscn" id="3_3dryh"]
+[ext_resource type="PackedScene" uid="uid://cshn1giengx14" path="res://Scenes/platform.tscn" id="4_3dryh"]
 
 [node name="Game" type="Node2D"]
 
@@ -24,3 +25,6 @@ offset_bottom = -35.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(13, 70)
+
+[node name="Platform" parent="." instance=ExtResource("4_3dryh")]
+position = Vector2(288, -462)
