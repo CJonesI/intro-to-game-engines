@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://cf3ugwvgwr2mn"]
+
+[ext_resource type="Texture2D" uid="uid://bi40ep63o0n78" path="res://Assets/2D Resources/characters/DinoSprites - vita.png" id="1_ymxaj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88kja"]
+atlas = ExtResource("1_ymxaj")
+region = Rect2(0, 0, 23, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_it8n0"]
+atlas = ExtResource("1_ymxaj")
+region = Rect2(23, 0, 23, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbyq6"]
+atlas = ExtResource("1_ymxaj")
+region = Rect2(46, 0, 23, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbq55"]
+atlas = ExtResource("1_ymxaj")
+region = Rect2(69, 0, 23, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t38ji"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88kja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_it8n0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbyq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbq55")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t38ji")
