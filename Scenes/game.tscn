@@ -1,9 +1,26 @@
-[gd_scene load_steps=8 format=3 uid="uid://cl2v74k1gxcb4"]
+[gd_scene load_steps=17 format=3 uid="uid://cl2v74k1gxcb4"]
 
 [ext_resource type="PackedScene" uid="uid://dfwlo8by8pl11" path="res://character_body_2d.tscn" id="1_ebmjs"]
 [ext_resource type="PackedScene" uid="uid://bkgkxotdvpw5o" path="res://Scenes/tilemap2d.tscn" id="1_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://bo4bv2j3b48cj" path="res://label.tscn" id="3_3dryh"]
 [ext_resource type="PackedScene" uid="uid://cshn1giengx14" path="res://Scenes/platform.tscn" id="4_3dryh"]
+[ext_resource type="PackedScene" uid="uid://clmf1ojay3bwj" path="res://Scenes/coin.tscn" id="5_wowpa"]
+[ext_resource type="PackedScene" uid="uid://rv0mu01fl6t7" path="res://Scenes/killzone.tscn" id="6_i6g32"]
+
+[sub_resource type="Animation" id="Animation_wowpa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(297, -629)]
+}
 
 [sub_resource type="Animation" id="Animation_3dryh"]
 resource_name = "move"
@@ -22,7 +39,30 @@ tracks/0/keys = {
 "values": [Vector2(297, -629), Vector2(297, -328)]
 }
 
-[sub_resource type="Animation" id="Animation_wowpa"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i6g32"]
+_data = {
+&"RESET": SubResource("Animation_wowpa"),
+&"move": SubResource("Animation_3dryh")
+}
+
+[sub_resource type="Animation" id="Animation_i6g32"]
+resource_name = "move"
+length = 1.9
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.8666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1913, -707), Vector2(1913, -552)]
+}
+
+[sub_resource type="Animation" id="Animation_1l0tm"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -34,14 +74,24 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(297, -629)]
+"values": [Vector2(1913, -707)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_i6g32"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v158k"]
 _data = {
-&"RESET": SubResource("Animation_wowpa"),
-&"move": SubResource("Animation_3dryh")
+&"RESET": SubResource("Animation_1l0tm"),
+&"move": SubResource("Animation_i6g32")
 }
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1l0tm"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i6g32"]
+distance = -1.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v158k"]
+distance = -2.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h4fw4"]
 
 [node name="Game" type="Node2D"]
 
@@ -50,14 +100,16 @@ _data = {
 [node name="Player" parent="." instance=ExtResource("1_ebmjs")]
 position = Vector2(-31, -5)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(5, 5)
-
 [node name="Label" parent="Player" instance=ExtResource("3_3dryh")]
 offset_left = -53.0
 offset_top = -58.0
 offset_right = 58.0
 offset_bottom = -35.0
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(31, 5)
+zoom = Vector2(5, 5)
+limit_bottom = 300
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -72,3 +124,72 @@ libraries = {
 &"": SubResource("AnimationLibrary_i6g32")
 }
 autoplay = "move"
+
+[node name="Coin" parent="." instance=ExtResource("5_wowpa")]
+position = Vector2(246, -9)
+
+[node name="Coin2" parent="." instance=ExtResource("5_wowpa")]
+position = Vector2(312, -39)
+
+[node name="Coin3" parent="." instance=ExtResource("5_wowpa")]
+position = Vector2(670, -146)
+
+[node name="Coin4" parent="." instance=ExtResource("5_wowpa")]
+position = Vector2(703, -151)
+
+[node name="Coin5" parent="." instance=ExtResource("5_wowpa")]
+position = Vector2(768, -150)
+
+[node name="Coin6" parent="." instance=ExtResource("5_wowpa")]
+position = Vector2(833, -151)
+
+[node name="Coin7" parent="." instance=ExtResource("5_wowpa")]
+position = Vector2(1041, -5)
+
+[node name="Coin8" parent="." instance=ExtResource("5_wowpa")]
+position = Vector2(1041, -30)
+
+[node name="Coin9" parent="." instance=ExtResource("5_wowpa")]
+position = Vector2(1041, -53)
+
+[node name="Coin10" parent="." instance=ExtResource("5_wowpa")]
+position = Vector2(1040, -78)
+
+[node name="Coin11" parent="." instance=ExtResource("5_wowpa")]
+position = Vector2(1176, -295)
+
+[node name="Coin12" parent="." instance=ExtResource("5_wowpa")]
+position = Vector2(1193, -295)
+
+[node name="Platform2" parent="." instance=ExtResource("4_3dryh")]
+position = Vector2(1913, -707)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform2"]
+libraries = {
+&"": SubResource("AnimationLibrary_v158k")
+}
+
+[node name="Killzone" parent="." instance=ExtResource("6_i6g32")]
+position = Vector2(-210, 343)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("WorldBoundaryShape2D_1l0tm")
+
+[node name="Killzone2" parent="." instance=ExtResource("6_i6g32")]
+position = Vector2(310, 336)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone2"]
+position = Vector2(-28, -49)
+shape = SubResource("WorldBoundaryShape2D_i6g32")
+
+[node name="Killzone3" parent="." instance=ExtResource("6_i6g32")]
+position = Vector2(81, 155)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone3"]
+shape = SubResource("WorldBoundaryShape2D_v158k")
+
+[node name="Killzone4" parent="." instance=ExtResource("6_i6g32")]
+position = Vector2(772, -53)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone4"]
+shape = SubResource("WorldBoundaryShape2D_h4fw4")
