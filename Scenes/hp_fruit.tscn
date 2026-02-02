@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://cna6xwk8sp2j3"]
+
+[ext_resource type="Script" uid="uid://cy4jidqlmtfdo" path="res://Scripts/hp_fruit.gd" id="1_c1alb"]
+[ext_resource type="Texture2D" uid="uid://cbhoxu2ox51yf" path="res://Assets/2D Resources/items/fruit.png" id="2_yqvdw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivy33"]
+atlas = ExtResource("2_yqvdw")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_416nj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivy33")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3epm1"]
+radius = 4.0
+
+[node name="HP fruit" type="Area2D"]
+script = ExtResource("1_c1alb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_416nj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_3epm1")

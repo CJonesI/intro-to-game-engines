@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://clmf1ojay3bwj" path="res://Scenes/coin.tscn" id="5_wowpa"]
 [ext_resource type="PackedScene" uid="uid://rv0mu01fl6t7" path="res://Scenes/killzone.tscn" id="6_i6g32"]
 [ext_resource type="PackedScene" uid="uid://o4gler0xvab1" path="res://Scenes/slime.tscn" id="7_1l0tm"]
-[ext_resource type="PackedScene" uid="uid://cna6xwk8sp2j3" path="res://Scenes/hp_fruit.tscn" id="8_v158k"]
 
 [sub_resource type="Animation" id="Animation_wowpa"]
 length = 1.8
@@ -90,6 +89,9 @@ _data = {
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i6g32"]
 distance = -1.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v158k"]
+distance = -2.0
 
 [node name="Game" type="Node2D"]
 
@@ -182,6 +184,10 @@ shape = SubResource("WorldBoundaryShape2D_i6g32")
 [node name="Killzone3" parent="." instance=ExtResource("6_i6g32")]
 position = Vector2(81, 155)
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone3"]
+position = Vector2(-64, -37)
+shape = SubResource("WorldBoundaryShape2D_v158k")
+
 [node name="Killzone4" parent="." instance=ExtResource("6_i6g32")]
 position = Vector2(772, -53)
 
@@ -202,12 +208,3 @@ position = Vector2(1729, -160)
 
 [node name="slime6" parent="." instance=ExtResource("7_1l0tm")]
 position = Vector2(2282, -178)
-
-[node name="HP fruit" parent="." instance=ExtResource("8_v158k")]
-position = Vector2(490, -19)
-
-[node name="HP fruit2" parent="." instance=ExtResource("8_v158k")]
-position = Vector2(515, 192)
-
-[node name="HP fruit3" parent="." instance=ExtResource("8_v158k")]
-position = Vector2(1897, -194)
