@@ -22,11 +22,15 @@ animations = [{
 radius = 4.0
 
 [node name="HP fruit" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_c1alb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_416nj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 2
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_3epm1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

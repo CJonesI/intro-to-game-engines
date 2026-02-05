@@ -97,7 +97,7 @@ distance = -1.0
 position = Vector2(49, -1)
 
 [node name="Player" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(-39, -43)
+position = Vector2(483, -169)
 
 [node name="Label" parent="Player" instance=ExtResource("3_3dryh")]
 offset_left = -53.0
