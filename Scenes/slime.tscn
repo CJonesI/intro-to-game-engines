@@ -68,12 +68,6 @@ frame_progress = 0.75965846
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_aiwxb")
 
-[node name="right" type="RayCast2D" parent="."]
-target_position = Vector2(13, 0)
-
-[node name="Left" type="RayCast2D" parent="."]
-target_position = Vector2(-13, 0)
-
 [node name="Hit area" type="Area2D" parent="."]
 
 [node name="hitbox" type="CollisionShape2D" parent="Hit area"]
