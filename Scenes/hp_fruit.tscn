@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cna6xwk8sp2j3"]
+[gd_scene load_steps=10 format=3 uid="uid://cna6xwk8sp2j3"]
 
 [ext_resource type="Script" uid="uid://cy4jidqlmtfdo" path="res://Scripts/hp_fruit.gd" id="1_c1alb"]
 [ext_resource type="Texture2D" uid="uid://cbhoxu2ox51yf" path="res://Assets/2D Resources/items/fruit.png" id="2_yqvdw"]
+[ext_resource type="AudioStream" uid="uid://cl1qx1ejvhxo3" path="res://Assets/2D Resources/sounds/sfx_coin.ogg" id="3_yqvdw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ivy33"]
 atlas = ExtResource("2_yqvdw")
@@ -21,6 +22,104 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_3epm1"]
 radius = 4.0
 
+[sub_resource type="Animation" id="Animation_ivy33"]
+resource_name = "fruitpickup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333336),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.03333336),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D/HP:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.03333336),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_416nj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D/HP:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3epm1"]
+_data = {
+&"RESET": SubResource("Animation_416nj"),
+&"fruitpickup": SubResource("Animation_ivy33")
+}
+
 [node name="HP fruit" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_c1alb")
@@ -32,5 +131,14 @@ sprite_frames = SubResource("SpriteFrames_416nj")
 visibility_layer = 2
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_3epm1")
+
+[node name="HP" type="AudioStreamPlayer2D" parent="CollisionShape2D"]
+stream = ExtResource("3_yqvdw")
+bus = &"Sound Effects"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3epm1")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
