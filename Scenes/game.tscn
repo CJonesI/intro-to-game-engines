@@ -1,8 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://cl2v74k1gxcb4"]
+[gd_scene load_steps=22 format=3 uid="uid://cl2v74k1gxcb4"]
 
 [ext_resource type="PackedScene" uid="uid://dfwlo8by8pl11" path="res://character_body_2d.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://dq6bgs4ytpxni" path="res://Scripts/game_manager.gd" id="1_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://bkgkxotdvpw5o" path="res://Scenes/tilemap2d.tscn" id="1_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://fpt58h8cwlo3" path="res://Scenes/main_menu.tscn" id="2_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://bo4bv2j3b48cj" path="res://label.tscn" id="3_3dryh"]
 [ext_resource type="PackedScene" uid="uid://cshn1giengx14" path="res://Scenes/platform.tscn" id="4_3dryh"]
 [ext_resource type="PackedScene" uid="uid://clmf1ojay3bwj" path="res://Scenes/coin.tscn" id="5_wowpa"]
@@ -88,6 +89,21 @@ _data = {
 &"move": SubResource("Animation_i6g32")
 }
 
+[sub_resource type="Animation" id="Animation_h4fw4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2333, 226)]
+}
+
 [sub_resource type="Animation" id="Animation_v158k"]
 resource_name = "move"
 length = 1.5
@@ -105,21 +121,6 @@ tracks/0/keys = {
 "values": [Vector2(2333, 226), Vector2(2475, 226)]
 }
 
-[sub_resource type="Animation" id="Animation_h4fw4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2333, 226)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ldgsr"]
 _data = {
 &"RESET": SubResource("Animation_h4fw4"),
@@ -132,6 +133,8 @@ _data = {
 distance = -1.0
 
 [node name="Game" type="Node2D"]
+
+[node name="Main Menu" parent="." instance=ExtResource("2_ldgsr")]
 
 [node name="Game Manager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -147,7 +150,7 @@ text = "Coins: "
 [node name="Core" type="Node" parent="."]
 
 [node name="tilemap2" parent="Core" instance=ExtResource("1_wrm1d")]
-position = Vector2(49, -3)
+position = Vector2(47, 1)
 
 [node name="Player" parent="Core" instance=ExtResource("1_ebmjs")]
 position = Vector2(-45, -37)
@@ -236,6 +239,18 @@ position = Vector2(972, -87)
 [node name="Coin11" parent="Coins" instance=ExtResource("5_wowpa")]
 position = Vector2(1110, -270)
 
+[node name="Coin3" parent="Coins" instance=ExtResource("5_wowpa")]
+position = Vector2(1326, 190)
+monitorable = false
+
+[node name="Coin13" parent="Coins" instance=ExtResource("5_wowpa")]
+position = Vector2(1363, 189)
+monitorable = false
+
+[node name="Coin14" parent="Coins" instance=ExtResource("5_wowpa")]
+position = Vector2(1426, 189)
+monitorable = false
+
 [node name="Coin12" parent="Coins" instance=ExtResource("5_wowpa")]
 position = Vector2(1136, -271)
 
@@ -254,12 +269,6 @@ position = Vector2(310, 336)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzones/Killzone2"]
 position = Vector2(-94, -91)
 shape = SubResource("WorldBoundaryShape2D_i6g32")
-
-[node name="Killzone3" parent="Killzones" instance=ExtResource("6_i6g32")]
-position = Vector2(81, 155)
-
-[node name="Killzone4" parent="Killzones" instance=ExtResource("6_i6g32")]
-position = Vector2(772, -53)
 
 [node name="Slimes" type="Node" parent="."]
 
@@ -299,3 +308,11 @@ position = Vector2(1897, -194)
 position = Vector2(1745, 180)
 
 [node name="Label" type="Node" parent="."]
+
+[node name="Label2" type="Label" parent="Label"]
+offset_left = 112.0
+offset_top = -192.0
+offset_right = 407.0
+offset_bottom = -143.0
+text = "Space= Jump
+Left/Right arrow= left right movement"

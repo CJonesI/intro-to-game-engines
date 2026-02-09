@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://fpt58h8cwlo3"]
+
+[ext_resource type="Script" uid="uid://bh0ppbp3g1cyy" path="res://Scripts/button_manager.gd" id="1_28flt"]
+
+[node name="Main Menu" type="Node2D"]
+position = Vector2(248, 64)
+
+[node name="button manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_28flt")
+
+[node name="Start" type="Button" parent="button manager"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -5.9420004
+anchor_top = -3.2610002
+anchor_right = -5.9420004
+anchor_bottom = -3.2610002
+offset_left = 222.68002
+offset_top = 95.44
+offset_right = 945.68005
+offset_bottom = 355.44
+text = "START GAME"
+
+[node name="Quit" type="Button" parent="button manager"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 3.6640003
+anchor_top = -1.409
+anchor_right = 3.6640003
+anchor_bottom = -1.409
+offset_left = -158.56001
+offset_top = 334.36
+offset_right = 567.44
+offset_bottom = 585.36
+text = "QUIT"
+autowrap_trim_flags = 0
