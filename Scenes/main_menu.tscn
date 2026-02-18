@@ -2,11 +2,15 @@
 
 [ext_resource type="Script" uid="uid://bh0ppbp3g1cyy" path="res://Scripts/button_manager.gd" id="1_28flt"]
 
-[node name="Main Menu" type="Node2D"]
-position = Vector2(248, 64)
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 248.0
+offset_top = 64.0
+offset_right = 248.0
+offset_bottom = 64.0
 
 [node name="button manager" type="Control" parent="."]
-layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -38,3 +42,6 @@ offset_right = 567.44
 offset_bottom = 585.36
 text = "QUIT"
 autowrap_trim_flags = 0
+
+[connection signal="pressed" from="button manager/Start" to="button manager" method="_on_start_pressed"]
+[connection signal="pressed" from="button manager/Quit" to="button manager" method="_on_quit_pressed"]

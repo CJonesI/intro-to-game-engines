@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cl2v74k1gxcb4"]
+[gd_scene load_steps=20 format=3 uid="uid://cl2v74k1gxcb4"]
 
 [ext_resource type="PackedScene" uid="uid://dfwlo8by8pl11" path="res://character_body_2d.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://dq6bgs4ytpxni" path="res://Scripts/game_manager.gd" id="1_h4fw4"]
@@ -127,14 +127,13 @@ _data = {
 &"move": SubResource("Animation_v158k")
 }
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1l0tm"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i6g32"]
-distance = -1.0
-
 [node name="Game" type="Node2D"]
 
 [node name="Main Menu" parent="." instance=ExtResource("2_ldgsr")]
+offset_left = 342.0
+offset_top = 450.0
+offset_right = 342.0
+offset_bottom = 450.0
 
 [node name="Game Manager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -153,7 +152,7 @@ text = "Coins: "
 position = Vector2(47, 1)
 
 [node name="Player" parent="Core" instance=ExtResource("1_ebmjs")]
-position = Vector2(-45, -37)
+position = Vector2(-44, -37)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Core/Player"]
 position = Vector2(45, 37)
@@ -257,18 +256,20 @@ position = Vector2(1136, -271)
 [node name="Killzones" type="Node" parent="."]
 
 [node name="Killzone" parent="Killzones" instance=ExtResource("6_i6g32")]
-position = Vector2(-210, 343)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzones/Killzone"]
-position = Vector2(-129, -66)
-shape = SubResource("WorldBoundaryShape2D_1l0tm")
+position = Vector2(-342, 250)
+scale = Vector2(3, 1)
 
 [node name="Killzone2" parent="Killzones" instance=ExtResource("6_i6g32")]
-position = Vector2(310, 336)
+position = Vector2(222, 246)
+scale = Vector2(4, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzones/Killzone2"]
-position = Vector2(-94, -91)
-shape = SubResource("WorldBoundaryShape2D_i6g32")
+[node name="Killzone3" parent="Killzones" instance=ExtResource("6_i6g32")]
+position = Vector2(748, 269)
+scale = Vector2(4, 1)
+
+[node name="Killzone4" parent="Killzones" instance=ExtResource("6_i6g32")]
+position = Vector2(701, -90)
+scale = Vector2(3.5, 1)
 
 [node name="Slimes" type="Node" parent="."]
 

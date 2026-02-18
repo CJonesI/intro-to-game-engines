@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://o4gler0xvab1"]
+[gd_scene load_steps=11 format=3 uid="uid://o4gler0xvab1"]
 
 [ext_resource type="Script" uid="uid://bon2x0wih5t5i" path="res://Scripts/slime.gd" id="1_aiwxb"]
 [ext_resource type="Texture2D" uid="uid://c14thvfrx2bif" path="res://Assets/2D Resources/enemies/Gray Slime Spritesheet.png" id="1_swwnm"]
@@ -47,9 +47,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aiwxb"]
-size = Vector2(14, 6)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_paq7w"]
 size = Vector2(12, 4)
 
@@ -63,12 +60,11 @@ autoplay = "idle"
 frame_progress = 0.75965846
 
 [node name="Killzone" parent="AnimatedSprite2D" instance=ExtResource("2_aiwxb")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Killzone"]
-position = Vector2(0, 4)
-shape = SubResource("RectangleShape2D_aiwxb")
+position = Vector2(-1, 5)
+scale = Vector2(0.2, 0.8)
 
 [node name="Hit area" type="Area2D" parent="."]
+collision_mask = 2
 
 [node name="hitbox" type="CollisionShape2D" parent="Hit area"]
 position = Vector2(0, -2)

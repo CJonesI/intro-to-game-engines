@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://rv0mu01fl6t7"]
+[gd_scene load_steps=3 format=3 uid="uid://rv0mu01fl6t7"]
 
 [ext_resource type="Script" uid="uid://cejtrxypsn1l3" path="res://Scripts/killzone.gd" id="1_jvagm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jvagm"]
+size = Vector2(70, 9)
 
 [node name="Killzone" type="Area2D"]
 collision_mask = 2
@@ -9,6 +12,10 @@ script = ExtResource("1_jvagm")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, -0.5)
+shape = SubResource("RectangleShape2D_jvagm")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
