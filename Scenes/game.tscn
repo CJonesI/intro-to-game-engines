@@ -149,7 +149,7 @@ text = "Coins: "
 [node name="Core" type="Node" parent="."]
 
 [node name="tilemap2" parent="Core" instance=ExtResource("1_wrm1d")]
-position = Vector2(47, 1)
+position = Vector2(50, 0)
 
 [node name="Player" parent="Core" instance=ExtResource("1_ebmjs")]
 position = Vector2(-44, -37)
@@ -204,7 +204,7 @@ autoplay = "move"
 position = Vector2(1168, 210)
 
 [node name="Platform5" parent="Platforms" instance=ExtResource("4_3dryh")]
-position = Vector2(745, 222)
+position = Vector2(733, 221)
 
 [node name="Coins" type="Node" parent="."]
 
@@ -264,12 +264,16 @@ position = Vector2(222, 246)
 scale = Vector2(4, 1)
 
 [node name="Killzone3" parent="Killzones" instance=ExtResource("6_i6g32")]
-position = Vector2(748, 269)
-scale = Vector2(4, 1)
+position = Vector2(1114, 275)
+scale = Vector2(15, 1)
 
 [node name="Killzone4" parent="Killzones" instance=ExtResource("6_i6g32")]
 position = Vector2(701, -90)
 scale = Vector2(3.5, 1)
+
+[node name="Killzone5" parent="Killzones" instance=ExtResource("6_i6g32")]
+position = Vector2(2585, 261)
+scale = Vector2(10, 1)
 
 [node name="Slimes" type="Node" parent="."]
 
